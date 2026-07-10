@@ -1,0 +1,21 @@
+ถ้าเพื่อนแก้ไข repository ก่อนเรา และเราต้องการดึงการเปลี่ยนแปลงล่าสุดมาก่อนที่จะส่งงานของเรา ให้ใช้คำสั่ง
+
+git pull origin main
+
+หรือถ้าสาขาหลักของโปรเจกต์ใช้ชื่อ master ให้ใช้
+
+git pull origin master
+
+เหตุผล:
+git pull จะดึง (fetch) การเปลี่ยนแปลงล่าสุดจาก GitHub แล้วรวม (merge) เข้ากับโปรเจกต์ในเครื่องของเรา ทำให้ไฟล์เป็นเวอร์ชันล่าสุดก่อนที่เราจะทำ git push
+
+ลำดับการทำงานทั่วไปคือ
+
+git pull origin main
+# แก้ไขไฟล์
+git add .
+git commit -m "ข้อความอธิบายการแก้ไข"
+git push origin main
+
+คำตอบสั้น ๆ สำหรับแบบทดสอบ:
+ใช้คำสั่ง git pull origin main (หรือ git pull origin master หากโปรเจกต์ใช้สาขา master)
